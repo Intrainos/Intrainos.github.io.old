@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8" />
-<title>Unicode code converter [ishida >> utilities]</title>
+<title>Unicode code converter | 유니코드 코드 변환기</title>
 <meta name="description" content="Helps you convert between Unicode character numbers, characters, UTF-8 and UTF-16 code units in hex, percent escapes,and Numeric Character References (hex and decimal)." />
 <link rel="stylesheet" href="docs.css" type="text/css" />
 <link rel="stylesheet" href="localstyle.css" type="text/css" />
@@ -20,7 +20,7 @@ textarea { padding: 0 5px; }
 </style>
 <!--
 one line to give the program's name and an idea of what it does.
-Copyright (C) 2015 Intrainos intrainos@gmail.com
+Copyright (C) 2015 Intrainos Intrainos@outlook.com
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -58,7 +58,7 @@ Orignal GPL Licence
 <body class="app">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('/images/world.gif','Unicode code converter','v7.09');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('/images/world.gif','Unicode code converter | 유니코드 코드 변환기','v7.09.K0.2');</script>
 </header>
 
 
@@ -99,10 +99,10 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td colspan="2" style="padding-top: 20px;"><!--  *********** CHARACTERS *********** --> 
-      &#xA0;Characters<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('chars').focus();document.getElementById('chars').select();" />
+      &#xA0;문자<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('chars').focus();document.getElementById('chars').select();" />
       <button value="Convert" 
 				onclick="displayResults( chars.value, chars.id );
-                return false;" >Convert</button>
+                return false;" >변환</button>
        
       <!--button  
 				onclick="if (chars.value== '') { alert('No characters in the text area.'); } else { var list = window.open('/rishida/tools/analysestring?list='+encodeURIComponent(chars.value)+'&amp;smallgraphics=on&amp;compact=on&amp;noblock=on&amp;nounicode=on&amp;nonotes=on', 'list'); list.focus(); }
@@ -113,7 +113,7 @@ Orignal GPL Licence
                 return false;" >View in UniView</button-->
       <button  
 				onclick="var list = window.open( '/uniview/?charlist='+chars.value );
-                return false;" >View in UniView</button>
+                return false;" >UniView에서 보기(작동하지않음)</button>
       <br/>
       <textarea id="chars" name="chars" rows="2" cols="5"></textarea></td>
   </tr>
@@ -133,10 +133,10 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td colspan="2"><!--  *********** % ESCAPES *********** --> 
-      &#xA0;Percent encoding for URIs<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('pEsc').focus();document.getElementById('pEsc').select();" />
+      &#xA0;URL를 위한 퍼센트(%) 인코딩<img src="selectall.png" alt="선택" title="Select all text in the box" class="icon" onclick="document.getElementById('pEsc').focus();document.getElementById('pEsc').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertpEnc2Char(pEsc.value), pEsc.id ); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       <br/>
       <textarea id="pEsc" name="pEsc" rows="2" cols="5"></textarea></td>
   </tr>
@@ -145,7 +145,7 @@ Orignal GPL Licence
       &#xA0;Hexadecimal NCRs<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('hexNCRs').focus();document.getElementById('hexNCRs').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertHexNCR2Char(hexNCRs.value), hexNCRs.id ); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
        
       &nbsp;&nbsp;<span class="options"> Show ascii
       <input class="check" type="checkbox" id="hexncrascii" checked="checked" />
@@ -157,7 +157,7 @@ Orignal GPL Licence
       &#xA0;Decimal NCRs<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('decNCRs').focus();document.getElementById('decNCRs').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertDecNCR2Char(decNCRs.value), decNCRs.id ); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
        
       &nbsp;&nbsp; <span class="options">Show ascii
 <input type="checkbox" id="decncrascii" checked="checked" />
@@ -168,10 +168,10 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td><!--  *********** U+ *********** --> 
-      &#xA0;Unicode U+hex notation<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('Unicode').focus();document.getElementById('Unicode').select();" />
+      &#xA0;Unicode U+hex notation<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('Unicode').focus();document.getElementById('Unicode').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertUnicode2Char(Unicode.value), Unicode.id ); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       &nbsp;&nbsp; <span class="options">Show ascii
 <input class="check" type="checkbox" id="unicodeascii" checked="checked" />
       Latin1
@@ -179,10 +179,10 @@ Orignal GPL Licence
       </span><br/>
       <textarea id="Unicode" name="Unicode" rows="3" cols="5"></textarea></td>
     <td><!--  *********** 0x... *********** --> 
-      &#xA0;0x... notation<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('zeroX').focus();document.getElementById('zeroX').select();" />
+      &#xA0;0x... notation<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('zeroX').focus();document.getElementById('zeroX').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertZeroX2Char(zeroX.value), zeroX.id ); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       &nbsp;&nbsp; <span class="options">Show ascii
 <input class="check" type="checkbox" id="zeroXascii" checked="checked" />
       Latin1
@@ -192,10 +192,10 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td><!--  *********** CODE POINTS *********** --> 
-      &#xA0;Hexadecimal code points<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('codePoints').focus();document.getElementById('codePoints').select();" />
+      &#xA0;Hexadecimal code points<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('codePoints').focus();document.getElementById('codePoints').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertNumbers2Char(codePoints.value, 'hex'), codePoints.id ); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       &nbsp;&nbsp; <span class="options">Show ascii
 <input class="check" type="checkbox" id="hexcpascii" />
       Latin1
@@ -203,10 +203,10 @@ Orignal GPL Licence
       </span><br/>
       <textarea id="codePoints" name="codePoints" rows="3" cols="5"></textarea></td>
     <td><!--  *********** DEC CODE POINTS *********** --> 
-      &#xA0;Decimal code points<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('decCodePoints').focus();document.getElementById('decCodePoints').select();" />
+      &#xA0;Decimal code points<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('decCodePoints').focus();document.getElementById('decCodePoints').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertNumbers2Char(decCodePoints.value, 'dec'), decCodePoints.id ); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       &nbsp;&nbsp; <span class="options">Show ascii
 <input class="check" type="checkbox" id="deccpascii"  />
       Latin1
@@ -216,29 +216,29 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td><!--  *********** UTF-8 *********** --> 
-      &#xA0;UTF-8 code units<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('UTF8').focus();document.getElementById('UTF8').select();" />
+      &#xA0;UTF-8 code units<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('UTF8').focus();document.getElementById('UTF8').select();" />
       <button value="Convert" 
 				onclick="displayResults(convertUTF82Char(UTF8.value), UTF8.id); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       <br/>
       <textarea id="UTF8" name="UTF8" rows="3" cols="5"></textarea></td>
     <td><!--  *********** UTF-16 *********** --> 
-      &#xA0;UTF-16 code units<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('UTF16').focus();document.getElementById('UTF16').select();" />
+      &#xA0;UTF-16 code units<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('UTF16').focus();document.getElementById('UTF16').select();" />
       <button value="Convert" 
  				onclick="displayResults(convertUTF162Char(UTF16.value), UTF16.id); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       <br/>
       <textarea id="UTF16" name="UTF16" rows="3" cols="5"></textarea></td>
   </tr>
   <tr>
     <td><!--  *********** \ ESCAPES *********** --> 
-      &#xA0;JavaScript escapes<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('jEsc').focus();document.getElementById('jEsc').select();" />
+      &#xA0;JavaScript escapes<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('jEsc').focus();document.getElementById('jEsc').select();" />
       <button value="Convert" 
 				onclick="displayResults(convertjEsc2Char(jEsc.value, true), jEsc.id); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       &nbsp;&nbsp;<span class="options">
       <input class="check" type="checkbox" id="cstyleSC" />
-      Use C-style Supp. Chars. 
+      C-style 지원 문자 사용
       </span>
       <!--button value="Switch" 
 				onclick="jEsc.value = convert2C( jEsc.value ); 
@@ -246,10 +246,10 @@ Orignal GPL Licence
       <br/>
       <textarea id="jEsc" name="jEsc" rows="3" cols="5"></textarea></td>
     <td><!--  *********** CSS ESCAPES *********** --> 
-      &#xA0;CSS escapes<img src="selectall.png" alt="Select" title="Select all text in the box" class="icon" onclick="document.getElementById('CSS').focus();document.getElementById('CSS').select();" />
+      &#xA0;CSS escapes<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('CSS').focus();document.getElementById('CSS').select();" />
       <button value="Convert" 
 				onclick="displayResults(convertCSS2Char(CSS.value, true), CSS.id); 
-                return false;" >Convert</button>
+                return false;" >변환</button>
       <br/>
       <textarea id="CSS" name="CSS" rows="3" cols="5"></textarea></td>
   </tr>
@@ -326,8 +326,8 @@ Orignal GPL Licence
 
 
 <div class="smallprint"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2015-02-26  18:07<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence GPL (see source).</span></div>
+  <!-- #BeginDate format:IS1m -->2015-03-09  18:30<!-- #EndDate --> 
+  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:intrainos@outlook.com">Intrainos@outlook.com</a>. Licence GPL (see source).</span></div>
 
 <script type="text/javascript">
 	var escapedInput = document.getElementById('escapedInput');

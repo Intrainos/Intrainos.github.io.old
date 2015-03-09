@@ -9,7 +9,7 @@ function bp_header (icon, pageType, pathToRoot) {
 		+ '<div id="boilerplate"><div id="line" >&nbsp;</div></div>'
 		+ '<div id="topbar"><a href="/">r12a</a> &gt;&gt; '+pageType+'</div>'
 		+ '<div id="sitelinks" class="noprint">'
-		+ '<a href="http://rishida.net/blog/">blog</a>&nbsp; <a href="/doclist">docs</a>&nbsp; <a href="/applist">apps</a>&nbsp; <a href="/photos">photos</a>&nbsp;&nbsp;</span></div>';
+		+ '<a href="/">MainPage</a>&nbsp; 		<a href="http://r12a.github.io/apps/conversion/">Original Site</a>&nbsp; <a href="https://github.com/Intrainos/Intrainos.github.io/tree/master/Translate/Korean/Conversion/">Source</a>&nbsp; <a href="versions.html">Version Change</a>&nbsp;&nbsp;</span></div>'
 	}
 
 
@@ -18,16 +18,16 @@ function bp_compactHeader (icon, pageType, pathToRoot) {
 		+ '<div id="boilerplate"><div id="line" class="midlength">&nbsp;</div></div>'
 		+ '<div id="topbar"><a href="/">r12a</a> &gt;&gt; '+pageType+'</div>'
 		+ '<div id="sitelinks" class="noprint">'
-		+ '<a href="http://rishida.net/blog/">blog</a>&nbsp; <a href="/doclist">docs</a>&nbsp; <a href="/applist">apps</a>&nbsp; <a href="/photos">photos</a>&nbsp;&nbsp;</span></div>'
+		+ '<a href="/">MainPage</a>&nbsp; 		<a href="http://r12a.github.io/apps/conversion/">Original Site</a>&nbsp; <a href="https://github.com/Intrainos/Intrainos.github.io/tree/master/Translate/Korean/Conversion/">Source</a>&nbsp; <a href="versions.html">Version Change</a>&nbsp;&nbsp;</span></div>'
 	}
 
 
 function bp_appHeader (icon, appname, version) {
 	return '<div id="site-navigation"> <img id="bp_picture" class="app" alt=" " src="'+icon+'"  /></div>'
 		+ '<div id="boilerplate"><div id="line" class="app">&nbsp;</div></div>'
-		+ '<div id="topbar"><a href="/index">r12a</a> &gt;&gt; <a href="/applist">apps</a> &gt;&gt; '+appname+' <span class="versionnumber">'+version+'</span></div>'
+		+ '<div id="topbar">'+appname+' | Korean <span class="versionnumber">'+version+'</span></div>'
 		+ '<div id="sitelinks" class="noprint">'
-		+ '<a href="http://rishida.net/blog/">blog</a>&nbsp; <a href="/doclist">docs</a>&nbsp; <a href="/applist">apps</a>&nbsp; <a href="/photos">photos</a>&nbsp;&nbsp;</span></div>'
+		+ '<a href="/">MainPage</a>&nbsp; 		<a href="http://r12a.github.io/apps/conversion/">Original Site</a>&nbsp; <a href="https://github.com/Intrainos/Intrainos.github.io/tree/master/Translate/Korean/Conversion/">Source</a>&nbsp; <a href="versions.html">Version Change</a>&nbsp;&nbsp;</span></div>'
 	}
 
 
