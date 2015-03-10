@@ -112,8 +112,8 @@ Orignal GPL Licence
 				onclick="var list = window.open( '/rishida/uniview/?codepoints='+convertChar2CP( chars.value ) );
                 return false;" >View in UniView</button-->
       <button  
-				onclick="var list = window.open( '/uniview/?charlist='+chars.value );
-                return false;" >UniView에서 보기(작동하지않음)</button>
+				onclick="var list = window.open( 'http://r12a.github.io/uniview/?charlist='+chars.value );
+                return false;" >UniView에서 보기(영어)</button>
       <br/>
       <textarea id="chars" name="chars" rows="2" cols="5"></textarea></td>
   </tr>
@@ -147,7 +147,7 @@ Orignal GPL Licence
 				onclick="displayResults( convertHexNCR2Char(hexNCRs.value), hexNCRs.id ); 
                 return false;" >변환</button>
        
-      &nbsp;&nbsp;<span class="options"> Show ascii
+      &nbsp;&nbsp;<span class="options"> ascii로 보기
       <input class="check" type="checkbox" id="hexncrascii" checked="checked" />
       Latin1</span>
 <input type="checkbox" id="hexncrlatin1" />
@@ -159,7 +159,7 @@ Orignal GPL Licence
 				onclick="displayResults( convertDecNCR2Char(decNCRs.value), decNCRs.id ); 
                 return false;" >변환</button>
        
-      &nbsp;&nbsp; <span class="options">Show ascii
+      &nbsp;&nbsp; <span class="options">ascii로 보기
 <input type="checkbox" id="decncrascii" checked="checked" />
       Latin1
       <input type="checkbox" id="decncrlatin1" />
@@ -172,8 +172,7 @@ Orignal GPL Licence
       <button value="Convert" 
 				onclick="displayResults( convertUnicode2Char(Unicode.value), Unicode.id ); 
                 return false;" >변환</button>
-      &nbsp;&nbsp; <span class="options">Show ascii
-<input class="check" type="checkbox" id="unicodeascii" checked="checked" />
+      &nbsp;&nbsp; <span class="options">ascii로 보기<input class="check" type="checkbox" id="unicodeascii" checked="checked" />
       Latin1
       <input type="checkbox" id="unicodelatin1" />
       </span><br/>
@@ -183,7 +182,7 @@ Orignal GPL Licence
       <button value="Convert" 
 				onclick="displayResults( convertZeroX2Char(zeroX.value), zeroX.id ); 
                 return false;" >변환</button>
-      &nbsp;&nbsp; <span class="options">Show ascii
+      &nbsp;&nbsp; <span class="options">ascii로 보기
 <input class="check" type="checkbox" id="zeroXascii" checked="checked" />
       Latin1
       <input type="checkbox" id="zeroXlatin1" />
@@ -196,7 +195,7 @@ Orignal GPL Licence
       <button value="Convert" 
 				onclick="displayResults( convertNumbers2Char(codePoints.value, 'hex'), codePoints.id ); 
                 return false;" >변환</button>
-      &nbsp;&nbsp; <span class="options">Show ascii
+      &nbsp;&nbsp; <span class="options">ascii로 보기
 <input class="check" type="checkbox" id="hexcpascii" />
       Latin1
       <input type="checkbox" id="hexcplatin1" />
@@ -207,7 +206,7 @@ Orignal GPL Licence
       <button value="Convert" 
 				onclick="displayResults( convertNumbers2Char(decCodePoints.value, 'dec'), decCodePoints.id ); 
                 return false;" >변환</button>
-      &nbsp;&nbsp; <span class="options">Show ascii
+      &nbsp;&nbsp; <span class="options">ascii로 보기
 <input class="check" type="checkbox" id="deccpascii"  />
       Latin1
       <input type="checkbox" id="deccplatin1" />
@@ -216,14 +215,14 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td><!--  *********** UTF-8 *********** --> 
-      &#xA0;UTF-8 code units<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('UTF8').focus();document.getElementById('UTF8').select();" />
+      &#xA0;UTF-8 코드<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('UTF8').focus();document.getElementById('UTF8').select();" />
       <button value="Convert" 
 				onclick="displayResults(convertUTF82Char(UTF8.value), UTF8.id); 
                 return false;" >변환</button>
       <br/>
       <textarea id="UTF8" name="UTF8" rows="3" cols="5"></textarea></td>
     <td><!--  *********** UTF-16 *********** --> 
-      &#xA0;UTF-16 code units<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('UTF16').focus();document.getElementById('UTF16').select();" />
+      &#xA0;UTF-16 코드<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('UTF16').focus();document.getElementById('UTF16').select();" />
       <button value="Convert" 
  				onclick="displayResults(convertUTF162Char(UTF16.value), UTF16.id); 
                 return false;" >변환</button>
