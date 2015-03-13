@@ -1,6 +1,11 @@
 # Intrainos.github.io
 
-Translated Webpage to Korean/Only Translated Open Source Page/Translated Github.io Page
+Plans:
+Translated Webpage to Korean
+Only Translated Open Source Page
+Translated Github.io Page
 
-'Translate' Folder is Translate Files
+'Translate' Folder is Translated Files
 'FontCSS' Folder is Font CSS Folder
+
+[![Analytics](https://ga-beacon.appspot.com/UA-60044491-2/intrainos.github.io/readme)](https://github.com/intrainos/intrainos.github.io)
