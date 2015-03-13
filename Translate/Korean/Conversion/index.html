@@ -142,12 +142,12 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td><!--  *********** HEX NCRS *********** --> 
-      &#xA0;Hexadecimal NCRs<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('hexNCRs').focus();document.getElementById('hexNCRs').select();" />
+      &#xA0;16진법 NCRs<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('hexNCRs').focus();document.getElementById('hexNCRs').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertHexNCR2Char(hexNCRs.value), hexNCRs.id ); 
                 return false;" >변환</button>
        
-      &nbsp;&nbsp;<span class="options"> ascii로 보기
+      &nbsp;&nbsp;<span class="options"> 아스키 코드로 보기
       <input class="check" type="checkbox" id="hexncrascii" checked="checked" />
       Latin1</span>
 <input type="checkbox" id="hexncrlatin1" />
@@ -168,7 +168,7 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td><!--  *********** U+ *********** --> 
-      &#xA0;Unicode U+hex notation<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('Unicode').focus();document.getElementById('Unicode').select();" />
+      &#xA0;유니코드 U+hex 표기<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('Unicode').focus();document.getElementById('Unicode').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertUnicode2Char(Unicode.value), Unicode.id ); 
                 return false;" >변환</button>
@@ -191,7 +191,7 @@ Orignal GPL Licence
   </tr>
   <tr>
     <td><!--  *********** CODE POINTS *********** --> 
-      &#xA0;Hexadecimal code points<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('codePoints').focus();document.getElementById('codePoints').select();" />
+      &#xA0;16진법 코드<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('codePoints').focus();document.getElementById('codePoints').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertNumbers2Char(codePoints.value, 'hex'), codePoints.id ); 
                 return false;" >변환</button>
@@ -325,7 +325,7 @@ Orignal GPL Licence
 
 
 <div class="smallprint"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2015-03-10  18:54<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2015-03-13  19:43<!-- #EndDate --> 
   </span> KST. &nbsp;&bull;&nbsp; Copyright <a href="mailto:intrainos@outlook.com">Intrainos@outlook.com</a>. Licence GPL (see source).</span></div>
 
 <script type="text/javascript">
