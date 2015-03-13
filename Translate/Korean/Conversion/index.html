@@ -58,7 +58,7 @@ Orignal GPL Licence
 <body class="app">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('world.gif','Unicode code converter | 유니코드 코드 변환기','v7.09.K0.3');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('world.gif','Unicode code converter | 유니코드 코드 변환기','v7.09.K0.3.6');</script>
 </header>
 
 
@@ -154,7 +154,7 @@ Orignal GPL Licence
       <br/>
       <textarea id="hexNCRs" name="hexNCRs" rows="3" cols="5"></textarea></td>
     <td><!--  *********** DEC NCRS *********** --> 
-      &#xA0;Decimal NCRs<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('decNCRs').focus();document.getElementById('decNCRs').select();" />
+      &#xA0;10진법 NCRs<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('decNCRs').focus();document.getElementById('decNCRs').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertDecNCR2Char(decNCRs.value), decNCRs.id ); 
                 return false;" >변환</button>
@@ -178,7 +178,7 @@ Orignal GPL Licence
       </span><br/>
       <textarea id="Unicode" name="Unicode" rows="3" cols="5"></textarea></td>
     <td><!--  *********** 0x... *********** --> 
-      &#xA0;0x... notation<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('zeroX').focus();document.getElementById('zeroX').select();" />
+      &#xA0;0x... 표기<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('zeroX').focus();document.getElementById('zeroX').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertZeroX2Char(zeroX.value), zeroX.id ); 
                 return false;" >변환</button>
@@ -202,7 +202,7 @@ Orignal GPL Licence
       </span><br/>
       <textarea id="codePoints" name="codePoints" rows="3" cols="5"></textarea></td>
     <td><!--  *********** DEC CODE POINTS *********** --> 
-      &#xA0;Decimal code points<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('decCodePoints').focus();document.getElementById('decCodePoints').select();" />
+      &#xA0;10진법 코드<img src="selectall.png" alt="선택" title="이 칸에 있는 텍스트를 전부 선택 합니다." class="icon" onclick="document.getElementById('decCodePoints').focus();document.getElementById('decCodePoints').select();" />
       <button value="Convert" 
 				onclick="displayResults( convertNumbers2Char(decCodePoints.value, 'dec'), decCodePoints.id ); 
                 return false;" >변환</button>
@@ -325,7 +325,7 @@ Orignal GPL Licence
 
 
 <div class="smallprint"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2015-03-13  19:43<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2015-03-13  22:04<!-- #EndDate --> 
   </span> KST. &nbsp;&bull;&nbsp; Copyright <a href="mailto:intrainos@outlook.com">Intrainos@outlook.com</a>. Licence GPL (see source).</span></div>
 
 <script type="text/javascript">
