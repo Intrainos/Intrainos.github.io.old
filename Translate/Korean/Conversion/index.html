@@ -58,17 +58,17 @@ Orignal GPL Licence
 <body class="app">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('world.gif','Unicode code converter | 유니코드 코드 변환기','v7.09.K0.3.7');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('world.gif','Unicode code converter | 유니코드 코드 변환기','v7.09.K0.3.8');</script>
 </header>
 
 
 <div class="section">
-    <button style="color:teal; float: right;"" onclick="escapedInput.value='The decomposition mapping is \u003C츠, U+11B8>, and not \u003C0x110E, &#x1173;, 11B8>.\n\u003Cp>The title says ‫פעילות הבינאום, W3C‬ in Hebrew\u003C/p>\nabcáßçकखी國際𐎄𐎔𐎘'; document.getElementById('example').style.display='block'; this.style.display='none';">Click for instructions.</button>
+    <button style="color:teal; float: right;"" onclick="escapedInput.value='The decomposition mapping is \u003C츠, U+11B8>, and not \u003C0x110E, &#x1173;, 11B8>.\n\u003Cp>The title says ‫פעילות הבינאום, W3C‬ in Hebrew\u003C/p>\nabcáßçकखी國際𐎄𐎔𐎘'; document.getElementById('example').style.display='block'; this.style.display='none';">자세한 정보</button>
   <div style="display:none;" id="example">
- <p>Type or paste text in any of the green or grey shaded boxes and click on the button <code>Convert</code> button above it. Alternative representations will appear in all the other boxes. You can then cut &amp; paste the results into your document. <img src="selectall.png" alt="선택" /> selects all the text in a box. See the <a href="#notesection">notes</a> at the bottom of the page for other options.
-    <p>The text in the <code>Mixed input</code> field below now contains a variety of escapes. Normally you would click on the <code>Convert</code> button just above the field to show the various escape formats below. Note, however, that this (unusually convoluted) text represents one character using just a hex code point number - therefore you should instead click on the button labelled <code>Hex code points</code> to convert that number as well as the other escapes in this particular example.</p>
-    <p>To continue with this example, click on <code>Hex code points</code> button.</p>
-    <p>You should now see the conversion results. You can use checkboxes with many fields to tweak the results. For more information see the notes in the lower part of the page.</p>
+ 	<p>초록색이나 회색 박스에 쓰거나 복사해서 <code>변환</code> 버튼을 누르세요. 변환된 문자는 다른 모든 박스에 나타납니다. 그런 다음 결과를 복사 붙여넣기로 당신의 문서에 넣을 수 있습니다. <img src="selectall.png" alt="선택"> 이버튼은 박스안의 택스트를 전부 선택합니다. 다른 옵션의 설명은 페이지 하단의 <a href="#notesection">notes</a> 를 참조하세요. </p>
+    <p>이제 아래의 <code>Mixed input</code> 필드에는 다양한 문자 텍스트들이 있습니다. 일반적으로 필드에는 다양한 문자의 표현이 되어 <code>Convert</code> 버튼을 클릭하실겁니다. 이 (매우 복잡한) 텍스트으로만 16진법 코드를 사용하여 문자를 나타내는 점에 유의하세요.  - 따라서 you should instead click on the button labelled <code>Hex code points</code> to convert that number as well as the other escapes in this particular example.</p>
+    <p>이 예를 진행할려면, <code>Hex code points</code> 버튼을 누르세요. </p>
+    <p>이제 당신은 변환된 결과를 보실 수 있습니다. 당신은 결과를 조정할 많은 필드와 체크박스가 있습니다.. 더 자세한 설명은 페이지 밑의 notes 항목에서 보실 수 있습니다.</p>
   </div>
 </div>
 <table id="converter">
@@ -124,7 +124,7 @@ Orignal GPL Licence
 				onclick="displayResults(convertXML2Char(XML.value), XML.id);
                 return false;" >변환</button>
       &nbsp;&nbsp;
-      <span class="options">Escape invisible characters
+      <span class="options">눈에 보이지 않는 문자를 보이게 하기
 <input class="check" type="checkbox" id="xmlinvisibles" checked="checked" />
       Convert bidi controls to HTML markup
       <input type="checkbox" id="xmlbidimarkup" />
@@ -261,8 +261,8 @@ Orignal GPL Licence
 
 <aside class="sidebar">
   <div class="section">
-    <h2 class="flush">Related links</h2>
-    <p><a href="/uniview/">UniView</a></p>
+    <h2 class="flush">관련된 링크들</h2>
+    <p><a href="/uniview/">UniView(영어)</a></p>
   </div>
 </aside>
 
@@ -275,10 +275,10 @@ Orignal GPL Licence
 <section>
   <h2 style="margin-left:10px;">Box inputs and outputs</h2>
     <p>The following describe how the various boxes work. <em>Input</em> describes what happens if you paste or type text into the named field and hit <code>Convert</code>. <em>Output</em> describes the output in the named field if you hit <code>Convert</code> elsewhere.</p>
-    <p><strong>Characters <br />
-      </strong><em>Input: </em>&nbsp;Everything is treated as characters, eg. U+1234 is not treated as an escape. <br />
-      <em> Output:&nbsp; </em>Everything displayed as characters. <br />
-      <em> Other: </em>&nbsp;You can see a list of names of characters in the <code>Characters</code> field by clicking on the <code>View names</code> button. You can view more detail for each character by clicking on <code>View in UniView</code>.</p>
+    <p><strong>문자 <br />
+      </strong><em>입력: </em>&nbsp모든 문자가 변환됩니다, U+1234 는 문자로 간주되지 않습니다. <br />
+      <em> 출력:&nbsp; </em>모든 문자가 표시됩니다. <br />
+      <em> 기타: </em>&nbsp;당신은 <code>View names</code >버튼을 클릭하여 <code>문자</code> 필드의 문자 이름을 보실 수 있습니다. 당신은 <code>UniView에서 보기(영어)</code> 버튼을 클릭하여 각 문제에 대해 자세한 정보를 보실 수 있습니다. 영문 사이트로 연결됩니다.</p>
     <p><strong>HTML/XML</strong><br />
       <em>Input:</em> Numeric character references or HTML character entities (except &amp;lt; &amp;gt; &amp;quot; and &amp;amp;) are converted to ordinary characters.<br />
       <em>Output:</em> Ordinary characters, except that &lt; &gt; &quot; and &amp; are converted to character entities. This is useful for preparing examples of sample code for HTML or XML.<br />

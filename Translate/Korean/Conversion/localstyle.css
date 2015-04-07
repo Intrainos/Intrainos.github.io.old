@@ -1,4 +1,5 @@
-@import url("/FontCSS/NanumGothic.css");
+@import url("/fontcss/NanumGothic.css");
+@import url("/fontcss/RobotoLight.css");
 
 body { 
 	margin: 0; 
