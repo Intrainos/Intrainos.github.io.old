@@ -1,12 +1,5 @@
-@import url("/FontCSS/NanumGothic.css");
-
-@font-face {
-    font-family: 'robotolight';
-    src: url('/webfonts/roboto-lightwebfont.woff2') format('woff2'),
-         url('/webfonts/roboto-lightwebfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
+@import url("/fontcss/NanumGothic.css");
+@import url("/fontcss/RobotoLight.css");
 
 body {
 	margin: 0;
